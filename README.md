@@ -3,16 +3,16 @@ BlockScoreWrapper
 
 iOS helper/wrapper for www.blockscore.com identity management API/Platform
 
-// BlockScoreWrapper is an object for BlockScore APIs.  See the notes below on how
-// to use this wrapper code. Mobickus LLC is not associated with BlockScore in any
-// way and this software is provided as is under MIT license.
+BlockScoreWrapper is an object for BlockScore APIs.  See the notes below on how
+to use this wrapper code. Mobickus LLC is not associated with BlockScore in any
+way and this software is provided as is under MIT license.
 
 
 To use BlockScoreWrapper follow these steps:
 
  1. Sign up and obtain a BlockScore API Key from http://www.blockscore.com
  2. Edit BlockScoreWrapper.h and replace BLOCKSCORE_API_KEY definition with your own key
- 3. Implement one the following method on the object where you are instantiating BlockScoreWrapper.
+ 3. Implement one delegate method on the object where you are instantiating BlockScoreWrapper.  This method receives the response from blockscore.com
  
  -(void) didFinishBlockScoreRequestWithResponse:(NSData*) data response:(NSURLResponse*)response error:(NSError*) error;
  
@@ -196,5 +196,3 @@ To use BlockScoreWrapper follow these steps:
  
  Another area for improvements: Validation, however right now we are relying on the
  BlockScore backend to do the validation.
-
-**/
